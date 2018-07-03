@@ -36,12 +36,16 @@ export class LunchComponent implements OnInit {
   	this.http.post(URL, nom);
   }*/
 
-  public add(name: string):void {
-    name = name.trim();
-    if (!name) {return; }
-    this.noms.push({name} as Nom);
+  public add(name: string, pic: string, seconded: boolean):void {
+	name = name.trim();
+  pic = pic.trim();
+  seconded = false;
+	if (!name || !pic) {return; }
+	this.noms.push({name, pic, seconded} as Nom);
+
 
   }
+
 
   public second():void {
     this.seconded = true;
