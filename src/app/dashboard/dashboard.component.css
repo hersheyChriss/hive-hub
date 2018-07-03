@@ -7,16 +7,16 @@
 @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
 
    #section1 {
-    background-color: #d34836;
+    background-color: #648097;
   }
   #section2 {
-    background-color: #009688;
+    background: linear-gradient(#4a5564, #5a7584);
   }
   #section3 {
-    background-color: #ffa000;
+    background-color: #545f6f;
   }
   #section4 {
-    background-color: #5677fc;
+    background: linear-gradient(#2a6584, #7a4564);
   }
   /* MIXINS
      ================================================================== */
