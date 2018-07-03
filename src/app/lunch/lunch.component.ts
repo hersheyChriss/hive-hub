@@ -12,21 +12,17 @@ import { NomService } from '../nom.service';
 export class LunchComponent implements OnInit {
   noms: Nom[];
   seconded;
-  
+
   constructor(private nomService: NomService) {}
 
-
   ngOnInit() {
-  	this.getNoms();
+    this.getNoms();
   }
 
   public getNoms(): void {
-	  this.nomService.getNoms()
-	  .subscribe(noms => this.noms = noms);
-  }  	
-  
-
-  
+    this.nomService.getNoms()
+      .subscribe(noms => this.noms = noms);
+  }
 
   /*public postNoms(nomName: string, nomPic_path: string, nomSeconded: boolean, nomVotes: number):void {
   	let nom = {
@@ -41,14 +37,14 @@ export class LunchComponent implements OnInit {
   }*/
 
   public add(name: string):void {
-	name = name.trim();
-	if (!name) {return; }
-	this.noms.push({name} as Nom);
+    name = name.trim();
+    if (!name) {return; }
+    this.noms.push({name} as Nom);
 
   }
 
   public second():void {
-	this.seconded = true;
+    this.seconded = true;
   }
 
 }

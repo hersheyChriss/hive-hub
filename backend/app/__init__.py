@@ -44,4 +44,3 @@ def nominations():
         db.session.commit()
         return 'OK', 200
 
-
