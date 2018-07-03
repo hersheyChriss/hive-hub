@@ -7,12 +7,12 @@ import { NomService } from '../nom.service';
 @Component({
   selector: 'app-lunch',
   templateUrl: './lunch.component.html',
-  styleUrls: ['./lunch.component.css']
+  styleUrls: ['./lunch.component.scss']
 })
 export class LunchComponent implements OnInit {
   noms: Nom[];
   seconded;
-  
+
   constructor(private nomService: NomService) {}
 
 
@@ -23,10 +23,10 @@ export class LunchComponent implements OnInit {
   public getNoms(): void {
 	  this.nomService.getNoms()
 	  .subscribe(noms => this.noms = noms);
-  }  	
-  
+  }
 
-  
+
+
 
   /*public postNoms(nomName: string, nomPic_path: string, nomSeconded: boolean, nomVotes: number):void {
   	let nom = {
