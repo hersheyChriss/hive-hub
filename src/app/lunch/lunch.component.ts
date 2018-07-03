@@ -7,7 +7,7 @@ import { NomService } from '../nom.service';
 @Component({
   selector: 'app-lunch',
   templateUrl: './lunch.component.html',
-  styleUrls: ['./lunch.component.css']
+  styleUrls: ['./lunch.component.scss']
 })
 export class LunchComponent implements OnInit {
   noms: Nom[];
