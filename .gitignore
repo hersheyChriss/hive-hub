@@ -8,6 +8,7 @@
 # dependencies
 /node_modules
 /venv
+/backend/venv
 
 # IDEs and editors
 /.idea

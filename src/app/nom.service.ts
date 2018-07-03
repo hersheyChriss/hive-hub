@@ -13,25 +13,24 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class NomService {
 
-  private nomsUrl = 'api/noms';  // URL to web api
+  private nomsUrl = 'api/nominations/';  // URL to web api
 
   constructor(
     private http: HttpClient) { }
 
-  /** GET heroes from the server */
+  /** GET nominations from the server */
   getNoms (): Observable<Nom[]> {
-    return this.http.get<Nom[]>(this.nomsUrl)
-      .pipe(
-        tap(nom => this.log(`fetched noms`)),
-        catchError(this.handleError('getNoms', []))
-      );
+    return this.http.get<Nom[]>(this.nomsUrl).pipe(
+      tap(nom => this.log(`fetched noms`)),
+      catchError(this.handleError('getNoms', []))
+    );
   }
 
-  /** GET hero by id. Will 404 if id not found */
+  /** GET nomination by id. Will 404 if id not found */
   getNom(name: string): Observable<Nom> {
     const url = `${this.nomsUrl}/${name}`;
     return this.http.get<Nom>(url).pipe(
-      tap(_ => this.log(`fetched nom name=${name}`)),
+      tap(_ => this.log(`fetched nomination name=${name}`)),
       catchError(this.handleError<Nom>(`getNom name=${name}`))
     );
   }
@@ -40,7 +39,7 @@ export class NomService {
   //////// Save methods //////////
 
   /** POST: add a new hero to the server */
-  addNom (nom: Nom): Observable<Nom> {
+  addNom(nom: Nom): Observable<Nom> {
     return this.http.post<Nom>(this.nomsUrl, nom, httpOptions).pipe(
       tap((nom: Nom) => this.log(`added nom`)),
       catchError(this.handleError<Nom>('addNom'))
@@ -49,7 +48,7 @@ export class NomService {
 
 
   /** PUT: update the hero on the server */
-  updateNom (nom: Nom): Observable<any> {
+  updateNom(nom: Nom): Observable<any> {
     return this.http.put(this.nomsUrl, nom, httpOptions).pipe(
       tap(_ => this.log(`updated nom`)),
       catchError(this.handleError<any>('updateNom'))
@@ -76,8 +75,8 @@ export class NomService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a NomService message with the MessageService */
   private log(message: string) {
-    
+
   }
 }
