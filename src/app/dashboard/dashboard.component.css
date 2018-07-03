@@ -159,13 +159,23 @@
     height: auto;
     padding-bottom: 1px;
   }
-  section h1,
-  section h2 {
+  section h1 {
+    font-size: 30pt;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     text-align: center;
-    padding-top: 4em;
+    padding-top: 100px;
+    -webkit-animation: float-in-right 0.45s ease;
+    animation: float-in-right 0.45s ease;
+  }
+  section h2 {
+    font-size: 30pt;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
     -webkit-animation: float-in-right 0.45s ease;
     animation: float-in-right 0.45s ease;
   }
