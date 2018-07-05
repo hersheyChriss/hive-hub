@@ -9,7 +9,7 @@ import { LegendComponent } from './legend/legend.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'lunch', component: LunchComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'help-page', component: HelpPageComponent },
