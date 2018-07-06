@@ -12,21 +12,41 @@ export class AppComponent {
 
   title = 'app';
 
-  /*navToDash(callback) {
-    this.router.navigate(['/dashboard']);
-    callback();
-  }
-  cScroll(x, y) {
-    window.scrollTo({left: x, top: y, behavior: 'smooth'});
-  }*/
-
   navToLeaders() {
     this.router.navigate(['/dashboard']);
     window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
   }
 
   navToActivities() {
-    this.router.navigate(['/dashboard']);
-    window.scrollTo({left: 0, top: 772-50, behavior: 'smooth'});
+    if (this.router.url === '/dashboard')
+      window.scrollTo({left: 0, top: 772-50, behavior: 'smooth'})
+    else {
+      this.router.navigate(['/dashboard']);
+      setTimeout(function() {
+        window.scrollTo({left: 0, top: 772-50, behavior: 'smooth'});
+      }, 250);
+    }
+  }
+
+  navToInfo() {
+    if (this.router.url === '/dashboard')
+      window.scrollTo({left: 0, top: 772+527-50, behavior: 'smooth'})
+    else {
+      this.router.navigate(['/dashboard']);
+      setTimeout(function() {
+        window.scrollTo({left: 0, top: 772+527-50, behavior: 'smooth'});
+      }, 250);
+    }
+  }
+
+  navToLegends() {
+    if (this.router.url === '/dashboard')
+      window.scrollTo({left: 0, top: 838+772+527-50, behavior: 'smooth'})
+    else {
+      this.router.navigate(['/dashboard']);
+      setTimeout(function() {
+        window.scrollTo({left: 0, top: 838+772+527-50, behavior: 'smooth'});
+      }, 250);
+    }
   }
 }

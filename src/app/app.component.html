@@ -1,12 +1,12 @@
 <nav id='nav'>
   <img class="img-responsive" src="/assets/images/output-onlinepngtools.png" alt="HiveHub">
   <ul>
-    <li routerLink="/dashboard" onclick="window.scrollTo({left: 0, top: 0, behavior: 'smooth'})">Home</li>
+    <li routerLink="" (click)="navToLeaders()">Home</li>
     <li routerLink="/lunch">Lunch</li>
     <li routerLink="" (click)="navToLeaders()">Hivemind Leaders</li>
     <li routerLink="" (click)="navToActivities()">Activities</li>
-    <li routerLink="/dashboard" onclick="window.scrollTo({left: 0, top: 772+527-50, behavior: 'smooth'})">Helpful Info</li>
-    <li routerLink="/dashboard" onclick="window.scrollTo({left: 0, top: 838+772+527-50, behavior: 'smooth'})">Legends</li>
+    <li routerLink="" (click)="navToInfo()">Helpful Info</li>
+    <li routerLink="" (click)="navToLegends()">Legends</li>
   </ul>
 </nav>
 <router-outlet></router-outlet>
