@@ -73,3 +73,34 @@ class NominationsCollection(Resource):
         """
         create_nom(request.get_json())
         return None, 201
+
+
+@ns.route('/<string:name>')
+@api.response(404, 'Nomination not found.')
+class NominationItem(Resource):
+    """
+    Operations upon a specified nomination.
+    """
+    @api.marshal_with(nomination)
+    def get(self, name):
+        """
+        Returns an nomination.
+        """
+        return Nomination.query.filter(Nomination.name == name).one()
+
+    @api.expect(nomination)
+    @api.response(204, 'Nomination successfully updated.')
+    def put(self, name):
+        """
+        Updates an nomination.
+        """
+        update_nom(name, request.get_json())
+        return None, 204
+
+    @api.response(204, 'Nomination successfully deleted.')
+    def delete(self, name):
+        """
+        Deletes an nomination.
+        """
+        delete_nom(name)
+        return None, 204
