@@ -58,19 +58,21 @@
 		<thead>
 			<tr>
 				<th>Location</th>
+        <th>Pictures</th>
 				<th>Nominate</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td><input #nomName /></td>
-				<td><button (click)="add(nomName.value); nomName.value=''">nom</button></td>
+        <td><input #nomPic /></td>
+				<td><button (click)="add(nomName.value, nomPic.value); nomName.value=''; nomPic.value=''">nom</button></td>
 			</tr>
 				
 		</tbody>
 	</table>
 
-	<table>
+	<table class="big-table">
 		<thead>
 			<tr>
 				<th>Current Noms</th>
@@ -78,9 +80,13 @@
 		</thead>
 		<tbody>
 			<ul class="noms">
-				<li *ngFor="let nom of noms">
-					<td><span>{{nom.name}}</span></td>
-					<td><button>2nd?</button></td>
+        <li *ngFor="let nom of noms">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <!--<td><button *ngIf={{nom.seconded}} (click)="second()" class="button">2nd?</button></td>-->
+          <td><img src="{{nom.pic}}"></td>
 				</li>
 			</ul>
 		</tbody>

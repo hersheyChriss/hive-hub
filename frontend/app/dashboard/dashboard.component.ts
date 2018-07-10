@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LeadersComponent } from './leaders/leaders.component';
+import { ActivitiesComponent } from './activities/activities.component';
 
 @Component({
   selector: 'app-dashboard',
