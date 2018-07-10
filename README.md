@@ -8,10 +8,12 @@ To Run:
 
 ### Backend
 To Run: 
-1. Configure personal virtualenv with python 2.7
+1. Make sure python 2.7 and pip are installed
 
-2. Activate virtual environment
+2. Configure a virtual environment with python 2.7 https://help.dreamhost.com/hc/en-us/articles/215489338-Installing-and-using-virtualenv-with-Python-2
 
-3. pip install -r requirements.txt
+3. Activate virtual environment
 
-4. python controller.py
+4. pip install -r requirements.txt
+
+5. python controller.py
