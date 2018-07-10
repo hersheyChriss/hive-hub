@@ -37,11 +37,11 @@ export class LunchComponent implements OnInit {
   }*/
 
   public add(name: string, pic: string, seconded: boolean):void {
-	name = name.trim();
-  pic = pic.trim();
-  seconded = false;
-	if (!name || !pic) {return; }
-	this.noms.push({name, pic, seconded} as Nom);
+    name = name.trim();
+    pic = pic.trim();
+    seconded = false;
+    if (!name || !pic) {return; }
+    this.noms.push({name, pic, seconded} as Nom);
 
 
   }
