@@ -1,17 +1,5 @@
-  @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
-
-/* VARS
-   ====================================================== */
-/* LOOP FOR COLORING SECTIONS
-   ================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
 
-  #section1 {
-    background-color: #648097;
-  }
-  #section2 {
-    background: linear-gradient(#4a5564, #5a7584);
-  }
   #section3 {
     background-color: #545f6f;
   }
@@ -86,25 +74,6 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  /* BASE
-     ================================================================= */
-  html {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    line-height: 2.35;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0;
-  }
-  p {
-    padding-top: 3em;
-    max-width: 700px;
-    margin: 0 auto;
-  }
   /* CONTENT
      ================================================================== */
   section {
@@ -134,34 +103,39 @@
     background-color: #5677fc
 }
 
-.list ul {
+  .list ul {
     list-style: none;
     margin: 0;
     margin-top:2em;
     padding: 0;
-  }
-  .list ul li {
-    background: #fff;
-    height: 40px;
-    color: #666;
-    line-height: 40px;
-    padding: 0 20px 0 0;
-  }
-  .list ul li a {
-    text-decoration: none;
-    color: #666;
-  }
-  .list ul li:nth-child(2n) {
-    color:white;
-    background: #5677fc;
-  }
-  .list ul li a:nth-child(2n) {
-    color:white;
-    background: #5677fc;
-  }
-  .list ul li:hover a {
-    width: 40px;
-    opacity: 1;
+
+    li {
+      background: #fff;
+      height: 40px;
+      color: #666;
+      line-height: 40px;
+      padding: 0 20px 0 0;
+
+      a {
+        text-decoration: none;
+        color: #666;
+      }
+
+      a:nth-child(2n) {
+        color:white;
+        background: #5677fc;
+      }
+    }
+
+    li:nth-child(2n) {
+      color:white;
+      background: #5677fc;
+    }
+
+    li:hover a {
+      width: 40px;
+      opacity: 1;
+    }
   }
 
   a {
@@ -229,23 +203,23 @@ tbody tr td {
   height: 60px;
   line-height: 60px;
   padding: 0;
-}
 
-tbody tr td a {
-  padding: 0px;
-  width: inherit;
-  height: inherit;
-}
+  a {
+    padding: 0px;
+    width: inherit;
+    height: inherit;
 
-tbody tr td a div {
-  height: 100%;
-  width: 100%;
-  padding: 0 20px;
-  color: #5f6062;
-}
+    div {
+      height: 100%;
+      width: 100%;
+      padding: 0 20px;
+      color: #5f6062;
+    }
 
-tbody tr td a div:hover {
-  color: #2d2d8d;
+    div:hover {
+      color: #2d2d8d;
+    }
+  }
 }
 
 tbody tr:nth-child(2n) {
