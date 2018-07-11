@@ -225,12 +225,27 @@ tbody tr td {
   font-weight: 400;
   color: #5f6062;
   font-size: 16px;
-  padding: 20px 20px 20px 20px;
-  border-bottom: 1px solid #e0e0e0;
+  width: auto;
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
 }
 
 tbody tr td a {
-  padding: 20px;
+  padding: 0px;
+  width: inherit;
+  height: inherit;
+}
+
+tbody tr td a div {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  color: #5f6062;
+}
+
+tbody tr td a div:hover {
+  color: #2d2d8d;
 }
 
 tbody tr:nth-child(2n) {
