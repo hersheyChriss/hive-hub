@@ -10,7 +10,7 @@ export class AppComponent {
 
   constructor(private router: Router) { }
 
-  title = 'app';
+  title = 'Hive Hub';
 
   navToLeaders() {
     this.router.navigate(['/dashboard']);
@@ -18,34 +18,34 @@ export class AppComponent {
   }
 
   navToActivities() {
-    if (this.router.url === '/dashboard')
-      window.scrollTo({left: 0, top: 772-50, behavior: 'smooth'})
-    else {
+    if (this.router.url === '/dashboard') {
+      window.scrollTo({left: 0, top: 772 - 50, behavior: 'smooth'});
+    } else {
       this.router.navigate(['/dashboard']);
       setTimeout(function() {
-        window.scrollTo({left: 0, top: 772-50, behavior: 'smooth'});
+        window.scrollTo({left: 0, top: 772 - 50, behavior: 'smooth'});
       }, 250);
     }
   }
 
   navToInfo() {
-    if (this.router.url === '/dashboard')
-      window.scrollTo({left: 0, top: 772+527-50, behavior: 'smooth'})
-    else {
+    if (this.router.url === '/dashboard') {
+      window.scrollTo({left: 0, top: 772 + 527 - 50, behavior: 'smooth'});
+    } else {
       this.router.navigate(['/dashboard']);
       setTimeout(function() {
-        window.scrollTo({left: 0, top: 772+527-50, behavior: 'smooth'});
+        window.scrollTo({left: 0, top: 772 + 527 - 50, behavior: 'smooth'});
       }, 250);
     }
   }
 
   navToLegends() {
-    if (this.router.url === '/dashboard')
-      window.scrollTo({left: 0, top: 838+772+527-50, behavior: 'smooth'})
-    else {
+    if (this.router.url === '/dashboard') {
+      window.scrollTo({left: 0, top: 838 + 772 + 527 - 50, behavior: 'smooth'});
+    } else {
       this.router.navigate(['/dashboard']);
       setTimeout(function() {
-        window.scrollTo({left: 0, top: 838+772+527-50, behavior: 'smooth'});
+        window.scrollTo({left: 0, top: 838 + 772 + 527 - 50, behavior: 'smooth'});
       }, 250);
     }
   }

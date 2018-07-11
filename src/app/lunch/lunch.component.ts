@@ -11,7 +11,7 @@ import { NomService } from '../nom.service';
 })
 export class LunchComponent implements OnInit {
   noms: Nom[];
-  seconded;
+  seconded: boolean;
 
   constructor(private nomService: NomService) {}
 
@@ -36,18 +36,16 @@ export class LunchComponent implements OnInit {
   	this.http.post(URL, nom);
   }*/
 
-  public add(name: string, pic: string, seconded: boolean):void {
+  public add(name: string, pic: string, seconded: boolean): void {
     name = name.trim();
     pic = pic.trim();
     seconded = false;
     if (!name || !pic) {return; }
     this.noms.push({name, pic, seconded} as Nom);
-
-
   }
 
 
-  public second():void {
+  public second(): void {
     this.seconded = true;
   }
 
