@@ -373,3 +373,32 @@ input:checked + .slider:before {
     border-radius: 50%;
   }
 
+
+.slide-img {
+  width: 100%;
+  height: 400px;
+}
+
+.noms {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: auto;
+  width:90%;
+}
+
+.example-card {
+  height: 500px;
+  flex-basis: 49%;
+  margin-bottom: 1em;
+  padding: 0;
+  padding-bottom: 1em;
+}
+
+.add-button {
+  position: fixed;
+  right: 25px; 
+  bottom: 25px;
+}

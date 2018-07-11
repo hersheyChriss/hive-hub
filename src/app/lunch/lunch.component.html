@@ -54,7 +54,7 @@
 <section  id="section1" >
 	<h1 class="lunch-heading">Friday Lunch Nominations</h1>
 					
-	<table>
+	<!--<table>
 		<thead>
 			<tr>
 				<th>Location</th>
@@ -70,26 +70,72 @@
 			</tr>
 				
 		</tbody>
-	</table>
+	</table> -->
 
-	<table class="big-table">
-		<thead>
-			<tr>
-				<th>Current Noms</th>
-			</tr>
-		</thead>
-		<tbody>
-			<ul class="noms">
-        <li *ngFor="let nom of noms">
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label>
-          <!--<td><button *ngIf={{nom.seconded}} (click)="second()" class="button">2nd?</button></td>-->
-          <td><img src="{{nom.pic}}"></td>
-				</li>
-			</ul>
-		</tbody>
-	</table>
+	<div class="noms" >
+
+		<mat-card class="example-card">
+		  	<ngb-carousel>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Random first slide">
+			  </ng-template>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://i.amz.mshcdn.com/zA7eX2PjjIb_K9ZoUpMuolBd2B4=/950x534/filters:quality(90)/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F683814%2Fc9aebd63-fc52-48a4-9ddf-1bca18375608.jpg">
+			  </ng-template>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://cdn.shopify.com/s/files/1/2010/2521/files/Picture2_large.png?v=1510259790" alt="Random third slide">
+			  </ng-template>
+			</ngb-carousel>
+		  	<mat-card-content>
+		    <p>
+		        Test
+		    </p>
+			</mat-card-content>
+		</mat-card>
+
+		<mat-card class="example-card">
+		  	<ngb-carousel>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Random first slide">
+			  </ng-template>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://i.amz.mshcdn.com/zA7eX2PjjIb_K9ZoUpMuolBd2B4=/950x534/filters:quality(90)/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F683814%2Fc9aebd63-fc52-48a4-9ddf-1bca18375608.jpg">
+			  </ng-template>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://cdn.shopify.com/s/files/1/2010/2521/files/Picture2_large.png?v=1510259790" alt="Random third slide">
+			  </ng-template>
+			</ngb-carousel>
+		  	<mat-card-content>
+		    <p>
+		        Taco Bell
+		    </p>
+			</mat-card-content>
+		</mat-card>
+
+		<mat-card class="example-card">
+		  	<ngb-carousel>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Random first slide">
+			  </ng-template>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://i.amz.mshcdn.com/zA7eX2PjjIb_K9ZoUpMuolBd2B4=/950x534/filters:quality(90)/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F683814%2Fc9aebd63-fc52-48a4-9ddf-1bca18375608.jpg">
+			  </ng-template>
+			  <ng-template ngbSlide>
+			    <img class="slide-img" src="https://cdn.shopify.com/s/files/1/2010/2521/files/Picture2_large.png?v=1510259790" alt="Random third slide">
+			  </ng-template>
+			</ngb-carousel>
+		  	<mat-card-content>
+		    <p>
+		        Papa Johns
+		    </p>
+			</mat-card-content>
+		</mat-card>
+
+	</div>
+
+	<button mat-fab class="add-button">
+		<mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+	</button>
+
 </section>
 
